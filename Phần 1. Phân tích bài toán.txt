@@ -1,0 +1,68 @@
+Phần 1. Phân tích bài toán
+Trong hệ thống Greentech_ Chuyên gia nông nghiệp Al, AL tiếp nhận câu hỏi cảu người noogn dân và cung cấp hướng dẫn về trồng trọt, chăm socsc cây trồng, phòng trừ bệnh
+Token là đơn vị mà mô hình al sử dung để phân tích và xử lý văn bản.Một token có thể là một từ,một phần của từ hoặc một ký tự. tùy vào bộ mã hóa.
+Markdown thường giúp tiết kiệm token vì cú pháp ngắn gọn, tt ký hiệu hơn HTML.
+Ví dụ để in đậm cụm từ "Rau sạch"
+Markdown:
+**Rau sạch**
+HTML
+<strong>Rau sạch</strong>
+ Lợi ích đối với GreenTech
+- Tiết kiệm chi phí: Giảm token đầu vào và đầu ra có thể làm giảm chi phí API.
+- Tăng hiệu quả xử lý: Ít dữ liệu cần xử lý hơn có thể giúp giảm độ trễ, đặc biệt khi hệ thống phục vụ nhiều người dùng.
+- Dễ đọc và bảo trì: Markdown có cú pháp gần với văn bản thông thường, giúp lập trình viên dễ chỉnh sửa nội dung hướng dẫn nông nghiệp.
+- Giữ cấu trúc nội dung: Tiêu đề, danh sách và bảng trong Markdown giúp AI phân biệt các phần thông tin như nguyên nhân, triệu chứng và biện pháp xử lý.
+Lưu ý: Tốc độ xử lý thực tế còn phụ thuộc vào kích thước mô hình, độ dài câu trả lời, máy chủ và cách triển khai hệ thống.
+
+Phần 2. So sánh và đánh giá
+1. Bảng so sánh Markdown và HTML
+Tiêu chí	Markdown	HTML
+Cú pháp	/ Ngắn gọn, đơn giản /	Nhiều thẻ mở và đóng/
+Số ký tự /Thường ít hơn với định dạng văn bản cơ bản	/Thường nhiều hơn với cùng nội dung
+Số lượng Token	/Có tiềm năng tiết kiệm token	/Có thể tốn nhiều token hơn do các thẻ
+Human-readable	/Cao, gần với văn bản thông thường/	Thấp hơn khi có nhiều thẻ
+Khả năng định dạng	/Phù hợp với tài liệu, tiêu đề, danh sách, bảng/	Linh hoạt, hỗ trợ nhiều thành phần giao diện
+Khả năng bảo trì	/Dễ viết, sửa và quản lý phiên bản	/Cần chú ý cấu trúc thẻ và thuộc tính
+Ứng dụng phù hợp	/ Nội dung AI, tài liệu hướng dẫn, câu trả lời dạng văn bản	/Website, giao diện web, biểu mẫu và nội dung tương tác
+Human-readable là mức độ con người có thể đọc và hiểu nội dung trực tiếp mà không cần công cụ chuyển đổi hoặc giải mã phức tạp.
+Ví dụ về hướng dẫn chăm sóc cây cà chua:
+Markdown:
+## Chăm sóc cà chua
+
+- Tưới nước đều đặn.
+- Đảm bảo cây nhận đủ ánh sáng.
+- Kiểm tra sâu bệnh thường xuyên.
+
+
+HTML:
+<h2>Chăm sóc cà chua</h2>
+<ul>
+  <li>Tưới nước đều đặn.</li>
+  <li>Đảm bảo cây nhận đủ ánh sáng.</li>
+  <li>Kiểm tra sâu bệnh thường xuyên.</li>
+</ul>
+
+
+Markdown dễ đọc hơn khi xem trực tiếp dưới dạng văn bản thô. HTML cũng có thể đọc được, nhưng người đọc phải phân biệt nội dung với các thẻ cấu trúc.
+3. Giải pháp tối ưu cho GreenTech
+Tôi đề xuất sử dụng Markdown làm định dạng trao đổi nội dung chính giữa AI và hệ thống, sau đó chuyển đổi sang HTML ở tầng giao diện nếu cần.
+Quy trình đề xuất:
+1. Tiếp nhận câu hỏi
+Người nông dân hỏi về cây trồng, sâu bệnh
+
+2. AI xử lý dữ liệu
+Phân tích câu hỏi và tạo câu trả lời bằng Markdown
+
+3. Kiểm tra và chuyển đổi
+Kiểm tra nội dung, chuyển Markdown sang HTML nếu cần
+
+4. Hiển thị kết quả
+Hướng dẫn dễ đọc trên website hoặc ứng dụng
+
+
+Lý do lựa chọn:
+1. Markdown giúp hạn chế cú pháp dư thừa trong các nội dung văn bản thông thường.
+2. Cấu trúc rõ ràng giúp người nông dân dễ theo dõi hướng dẫn.
+3. Việc chuyển đổi sang HTML cho phép hệ thống hiển thị nội dung đẹp mắt trên website.
+4. GreenTech có thể kiểm soát chi phí bằng cách theo dõi số token thực tế thay vì chỉ dựa vào số ký tự.
+Ngoài ra, hệ thống cần kiểm tra nội dung AI trước khi hiển thị và làm sạch HTML nếu có chuyển đổi, nhằm hạn chế lỗi định dạng và rủi ro bảo mật.
